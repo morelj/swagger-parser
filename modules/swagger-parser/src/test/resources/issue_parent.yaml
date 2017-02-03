@@ -1,0 +1,16 @@
+swagger: '2.0'
+definitions:
+  Parent:
+    type: object
+    properties:
+      parentProperty:
+        type: string
+        description: Value
+  Child:
+    type: object
+    allOf:
+      - $ref: '#/definitions/Parent'
+      - type: object
+        properties:
+          childProperty:
+            type: string
